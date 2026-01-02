@@ -1,0 +1,742 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background-color: transparent;
+  list-style: none;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 1140px) {
+  body .conteiner #inf {
+    justify-content: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .conteiner #inf .right {
+    text-align: center;
+    gap: 20px;
+  }
+  body .conteiner #child {
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  body .conteiner #child .left-midl-box {
+    gap: 30px;
+  }
+  body .conteiner #child .right {
+    width: 100%;
+    gap: 30px;
+  }
+  body .conteiner #child .right .btn.reverse {
+    margin: 0 auto;
+    min-width: 250px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .conteiner #child .left-box {
+    display: none;
+  }
+}
+/*
+.btn{
+    @include btn($main,$light);
+    &:hover{
+        @include btn($light,$main);
+    }
+    &-second{
+        @include btn($second,$light);
+        &:hover{
+            @include btn($light,$second);
+        }
+    }
+    &-reverse{
+        @include btn($light,transparent);
+        &:hover{
+            background-color: $light;
+            color: $second;
+    }
+}
+}
+*/
+body {
+  min-height: 100vh;
+  background-color: #f6f6f6;
+}
+body .img-box {
+  overflow: hidden;
+  background-size: cover; /* Увеличивает изображение до полного заполнения контейнера */
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Убирает повторение изображения */
+  border-radius: 10px;
+}
+
+.conteiner {
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+}
+.conteiner header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+.conteiner header .right {
+  width: 60px;
+}
+.conteiner header h1 {
+  font-size: 24px;
+  font-family: "Mon", sans-serif;
+  font-weight: 900;
+  color: #ef5da8;
+}
+.conteiner .flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.conteiner #inf {
+  margin-top: 10px;
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.conteiner #inf .right {
+  max-width: 540px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 36px 55px;
+  border-radius: 10px;
+  background-color: #0085ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.conteiner #inf .right p {
+  font-family: "Mon", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24.38px;
+  color: #fff;
+}
+.conteiner #inf .left {
+  max-width: 540px;
+  width: 100%;
+  height: 350px;
+  background-image: url(../image/kids.jpeg);
+}
+.conteiner #card {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.conteiner #card .card {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.0509803922);
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+.conteiner #card .card .img-box {
+  width: 100%;
+  height: 175px;
+  background-image: url(../image/pc.png);
+  background-size: cover; /* Увеличивает изображение до полного заполнения контейнера */
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat;
+}
+.conteiner #card .card .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px 10.5px;
+  width: 100%;
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+}
+.conteiner #card .card .title h3 {
+  font-family: "Mon", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 16.5px;
+  color: #202020;
+}
+.conteiner #card .card .title p {
+  font-family: "Mon", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  color: #000000;
+  display: -webkit-box; /* Устанавливает контейнер в режим flex для многоколоночного текста */
+  -webkit-line-clamp: 3; /* Ограничивает текст тремя строками */
+  -webkit-box-orient: vertical; /* Задаёт вертикальную ориентацию для текста */
+  overflow: hidden; /* Скрывает текст, выходящий за пределы блока */
+  text-overflow: ellipsis; /* Добавляет троеточие */
+}
+.conteiner #card .card .title .second {
+  font-family: "Mon", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 17.07px;
+  color: #0085ff;
+  border: 1px solid #0085ff;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  transition: 300ms;
+  cursor: pointer;
+}
+.conteiner #card .card .title .second:hover {
+  font-family: "Mon", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 17.07px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #0085ff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  transition: 300ms;
+  cursor: pointer;
+}
+.conteiner #card .card .title .contex {
+  font-family: "Mon", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12.19px;
+  color: #6a6a6a;
+}
+.conteiner #bid {
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 170px;
+}
+.conteiner #bid .box {
+  max-width: 312px;
+  width: 100%;
+  height: 266px;
+  margin-bottom: 56px;
+}
+.conteiner #bid .box h1 {
+  font-family: "Mon", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24.38px;
+  color: #000000;
+}
+.conteiner #bid .box input,
+.conteiner #bid .box #special {
+  font-family: "Mon", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12.19px;
+  color: #808080;
+  width: 91%;
+  border: 1px solid #e3e3e3;
+  border-radius: 7px;
+  padding: 7px 10px;
+}
+.conteiner #bid .box #special {
+  border-radius: 7px;
+  padding: 7px 10px;
+  width: 99%;
+}
+.conteiner #bid .box .btn {
+  font-family: "Mon", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 17.07px;
+  color: #ff3d00;
+  border: 1px solid #ff3d00;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  transition: 300ms;
+  cursor: pointer;
+}
+.conteiner #bid .box .btn:hover {
+  font-family: "Mon", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 17.07px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #ff3d00;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  transition: 300ms;
+  cursor: pointer;
+}
+.conteiner #child {
+  margin-bottom: 80px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 34px;
+  border-radius: 10px;
+  background-color: #0085ff;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.conteiner #child .left-midl-box {
+  display: flex;
+  gap: 39px;
+}
+.conteiner #child .left-midl-box .left-box {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.conteiner #child .left-midl-box .left-box .left {
+  position: absolute;
+  width: 398px;
+  height: 245px;
+  left: -124.5px;
+  background-image: url(../image/child.jpeg);
+}
+.conteiner #child .left-midl-box .midl {
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.conteiner #child .left-midl-box .midl .title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.conteiner #child .left-midl-box .midl .title.one {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.conteiner #child .left-midl-box .midl .title.one h1::before {
+  content: "ФИО";
+  display: block;
+  font-family: "Mon", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 19.5px;
+  color: #fff;
+}
+.conteiner #child .left-midl-box .midl .title.one p::before {
+  display: block;
+  content: "Меньшиков Илья Владимирович";
+  font-family: "Mon", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  color: #fff;
+}
+.conteiner #child .left-midl-box .midl .title.two {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.conteiner #child .left-midl-box .midl .title.two h1::before {
+  content: "E-mail";
+  display: block;
+  font-family: "Mon", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 19.5px;
+  color: #fff;
+}
+.conteiner #child .left-midl-box .midl .title.two p::before {
+  display: block;
+  content: "nikita@mail.com";
+  font-family: "Mon", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  color: #fff;
+}
+.conteiner #child .left-midl-box .midl .title.three {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.conteiner #child .left-midl-box .midl .title.three h1::before {
+  content: "Дата рождения";
+  display: block;
+  font-family: "Mon", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 19.5px;
+  color: #fff;
+}
+.conteiner #child .left-midl-box .midl .title.three p::before {
+  display: block;
+  content: "12.07.2008";
+  font-family: "Mon", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  color: #fff;
+}
+.conteiner #child .left-midl-box .midl .btn {
+  width: 100%;
+}
+.conteiner #child .left-midl-box .midl .btn.reverse {
+  font-family: "Mon", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 17.07px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  transition: 300ms;
+  cursor: pointer;
+}
+.conteiner #child .left-midl-box .midl .btn.reverse:hover {
+  background-color: #fff;
+  color: #0085ff;
+}
+.conteiner #child .right {
+  width: 472px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.conteiner #child .right .title {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  gap: 4px;
+}
+.conteiner #child .right .title h1::before {
+  content: "О себе";
+  display: block;
+  font-family: "Mon", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 19.5px;
+  color: #fff;
+}
+.conteiner #child .right .title p::before {
+  display: block;
+  content: "Таким образом постоянный количественный рост и сфера нашей активности способствует подготовки и реализации новых предложений. Повседневная практика показывает, что рамки и место обучения кадров играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! рамки и место обучения кадров способствует подготовки и реализации существенных финансовых и административных условий. Идейные соображения высшего порядка";
+  font-family: "Mon", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  color: #fff;
+}
+.conteiner #child .right .title h1::before {
+  font-family: "Mon", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24.38px;
+  color: #fff;
+}
+.conteiner #child .right .btn {
+  width: 100%;
+}
+.conteiner #child .right .btn.reverse {
+  font-family: "Mon", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 17.07px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  transition: 300ms;
+  cursor: pointer;
+}
+.conteiner #child .right .btn.reverse:hover {
+  background-color: #fff;
+  color: #0085ff;
+}
+.conteiner #achiev {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 95px;
+}
+.conteiner #achiev h1 {
+  font-family: "Mon", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24.38px;
+  color: #000000;
+}
+.conteiner #achiev .card-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8%;
+  margin-bottom: 80px;
+}
+.conteiner #achiev .card-box .card {
+  margin-top: 25px;
+  width: 110px;
+  height: 145px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.conteiner #achiev .card-box .card h4, .conteiner #achiev .card-box .card p {
+  text-align: center;
+}
+.conteiner #achiev .card-box .card h4 {
+  font-family: "Mon", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.63px;
+  color: #000000;
+}
+.conteiner #achiev .card-box .card p {
+  font-family: "Mon", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12.19px;
+  color: #000000;
+}
+.conteiner .box {
+  box-sizing: border-box;
+  padding: 25px 20px 34px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+}
+.conteiner .box input {
+  font-family: "Mon", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12.19px;
+  color: #808080;
+  width: 91%;
+  border: 1px solid #e3e3e3;
+  border-radius: 7px;
+  padding: 7px 10px;
+}
+.conteiner .box h1 {
+  font-family: "Mon", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24.38px;
+  color: #000000;
+}
+.conteiner #mainhtml {
+  width: 100%;
+}
+.conteiner #mainhtml input {
+  width: 100%;
+}
+.conteiner .input-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.conteiner #avtoriz {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.conteiner #avtoriz .box {
+  max-width: 450px;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 56px;
+}
+.conteiner #avtoriz .box h1 {
+  font-family: "Mon", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24.38px;
+  color: #000000;
+}
+.conteiner #avtoriz .box input {
+  font-family: "Mon", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12.19px;
+  color: #808080;
+  width: 91%;
+  border: 1px solid #e3e3e3;
+  border-radius: 7px;
+  padding: 7px 10px;
+}
+.conteiner #avtoriz .box .problem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 13px;
+}
+.conteiner #avtoriz .box .problem a {
+  font-family: "Mon", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  color: #000000;
+  cursor: pointer;
+  transition: 300ms;
+}
+.conteiner #avtoriz .box .problem a:hover {
+  color: #ff3d00;
+}
+.conteiner #avtoriz .box .btn {
+  font-family: "Mon", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 17.07px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #0085ff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  transition: 300ms;
+  cursor: pointer;
+}
+.conteiner #avtoriz .box .btn:hover {
+  font-family: "Mon", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 17.07px;
+  color: #0085ff;
+  border: 1px solid #0085ff;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  transition: 300ms;
+  cursor: pointer;
+}
+.conteiner #reg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.conteiner #reg .box {
+  max-width: 450px;
+  width: 100%;
+  height: 384px;
+}
+.conteiner #reg .box .problem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 13px;
+}
+.conteiner #reg .box .problem a {
+  font-family: "Mon", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  color: #000000;
+  cursor: pointer;
+  transition: 300ms;
+}
+.conteiner #reg .box .problem a:hover {
+  color: #ff3d00;
+}
+.conteiner #reg .box .btn {
+  font-family: "Mon", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 17.07px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #0085ff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  transition: 300ms;
+  cursor: pointer;
+}
+.conteiner #reg .box .btn:hover {
+  font-family: "Mon", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 17.07px;
+  color: #0085ff;
+  border: 1px solid #0085ff;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 115px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #202020;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer h1 {
+  font-family: "Mon", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24.38px;
+  color: #fff;
+}
+footer p {
+  font-family: "Mon", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  color: #fff;
+}
+footer .left {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+/*# sourceMappingURL=style.css.map */

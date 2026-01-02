@@ -1,0 +1,111 @@
+@media screen and (max-width: 1450px) {
+  html main .categories-new .container .category-card.big .title h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+    header .container{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+   
+}
+@media screen and (max-width: 1000px) {
+  :root {
+    --font-reduction: 2px; /* Величина уменьшения */
+  }
+  html main .categories-new .container .category-card.big .title h1 {
+    font-size: calc(var(--h1r-size) - var(--font-reduction));
+
+  }
+ html body main {
+    h1{
+    font-size: calc(var(--h1-size) - var(--font-reduction));
+  }
+  h2 {
+    font-size: calc(var(--h2-size) - var(--font-reduction));
+  }
+  h3 {
+    font-size: calc(var(--h3-size) - var(--font-reduction));
+  }
+  h4{
+    font-size: 14px;
+  }
+}
+  html main .bye-biker-hoodie .container .down-up-inf{
+    padding: 15px;
+    .upy{
+      box-sizing: border-box;
+      margin-left:2%;
+      margin-right: 2%;
+      min-width: 0;
+      width: 100%;
+    }
+    h4{
+    width: 100%;
+    min-width: 0;
+    }
+  }
+   
+}
+@media screen and (max-width: 900px) {
+  :root {
+    --font-reduction: 6px; /* Величина уменьшения */
+  }
+  html body main{
+    h3{
+      font-size: 14px;
+    }
+  }
+  body .billing .order-payment .payment-box .payment-methods .payment-option label strong{
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  html main .bye-biker-hoodie .container{
+    padding:0 10px;
+  }
+   
+    main .products .btn{
+      font-size: 12px;
+      font-weight: 400;
+    }
+    :root {
+        --font-reduction: 8px; /* Величина уменьшения */
+      }
+      html body main h2{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 600px) {
+    :root {
+        --font-reduction: 12px; /* Величина уменьшения */
+      }
+      main .billing .form-container{
+        label{
+          font-size: 16px;
+        }
+      }
+}
+@media screen and (max-width: 500px) {
+    main  .shopping-card {
+      .right-box{
+        min-width: 240px;
+      }
+      .top-title{
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .product-box .product-card{
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+    }
+}
+@media screen and (max-width: 470px) {
+    main .main-banner .container h1{
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,460 @@
+@import "defoult";
+@import "mixin";
+@import "adaptive";
+
+.btn {
+  @include btn($main, $light);
+  &:hover {
+    @include btn($light, $main);
+  }
+  &-second {
+    @include btn($second, $light);
+    &:hover {
+      @include btn($light, $second);
+    }
+  }
+  &-reverse {
+    @include btn($light, transparent);
+    &:hover {
+      background-color: $light;
+      color: $second;
+    }
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $light;
+  section{
+    scroll-margin-top: 50px;
+  }
+  .context {
+    color: $context;
+  }
+  .btn {
+    @include btn($main, $light);
+    &:hover {
+      @include btn($light, $main);
+    }
+    &-second {
+      @include btn($second, $light);
+      &:hover {
+        @include btn($light, $second);
+      }
+    }
+    &-reverse {
+      @include btn($light, transparent);
+      &:hover {
+        background-color: $light;
+        color: $second;
+      }
+    }
+  }
+  h1 {
+    @include font-style(46px, 900);
+  }
+  h2 {
+    @include font-style(32px, 900);
+  }
+  h3 {
+    @include font-style(20px, 500);
+  }
+  h4 {
+    @include font-style(16px, 500);
+  }
+  h5 {
+    @include font-style(14px, 400);
+  }
+  p,
+  a,
+  input {
+    @include font-style(16px);
+    &.context {
+      color: $context;
+    }
+  }
+}
+.conteiner {
+  //.nav-main {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+
+  .img-box {
+    overflow: hidden;
+    background-size: cover; /* Увеличивает изображение до полного заполнения контейнера */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Убирает повторение изображения */
+  }
+  .flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #one {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 850px;
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+      color: $light;
+    }
+    .toggle-body-btn {
+      z-index: 9;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 100vw;
+      height: 850px;
+      transition: background-color 0.3s ease;
+      background-color: rgba(0, 0, 0, 0);
+    }
+    .toggle-header-btn {
+      position: absolute;
+      top: 42px;
+      right: -25px;
+      z-index: 9;
+    }
+    .toggle-header-checkbox {
+      display: none; /* Скрываем сам чекбокс */
+    }
+    .header-svg {
+      margin-top: 43px;
+      margin-left: 25px;
+    }
+    .img-box {
+      height: 863px;
+      z-index: -1;
+      width: 100%;
+      background-image: url(../image/one2.png);
+      position: absolute;
+      top: -13px;
+    }
+    .title-box {
+      box-sizing: border-box;
+      position: relative;
+      height: 776px;
+      width: 100%;
+      .left {
+        position: absolute;
+        left: -50px;
+        top: 50%;
+        transform: translateY(-50%);
+        h5 {
+          color: $context;
+          transform: rotate(-90deg);
+          letter-spacing: 0.5em;
+        }
+      }
+      .midl {
+        position: absolute;
+        left: 10%;
+        margin-right: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 46px;
+        .button-link {
+          width: 380px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          @include font-style(20px, 600);
+          padding: 15px 40px;
+          background-color: $main;
+          border-radius: 5px;
+          transition: 0.3s;
+          #im {
+            transition: 0.3s;
+            fill: $light;
+          }
+          &:hover {
+            transform: scale(1.1);
+            background-color: $light;
+            color: $main;
+            #im {
+              fill: $main;
+            }
+          }
+        }
+      }
+      .right-panel {
+        .nav-main {
+          .nav-main-list {
+            .nav-item {
+              &.active{
+                a{
+                  color: $light;
+                }
+                &::after{
+                  transform: translateY(-50%) scaleY(1); 
+                }
+              }
+              a{
+                color: $context;
+                &:hover{
+                  color: $light;
+                }
+              }
+              &::after {
+                background-color: $light;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .header-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      transition: 0.3s;
+      header {
+        /* Скрытие хедера по умолчанию */
+        //   transform: translateY(-100%);
+        //   visibility: hidden;
+        //  backdrop-filter: blur(20px);
+        //    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+        border-radius: 10px;
+        transition: 0.3s;
+        height: 74px;
+        box-sizing: border-box;
+        padding: 18px 31px;
+        /* Анимация для плавного появления/скрытия */
+
+        .nav {
+          .nav-list {
+            display: flex;
+            align-items: center;
+            gap: 59px;
+            .btn {
+              color: $main;
+              &:hover {
+                color: $light;
+                transform: scale(1.1);
+              }
+            }
+            .nav-item {
+              position: relative;
+              color: $light;
+              font-size: 16px;
+              cursor: pointer;
+              transition: 0.3s;
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%) scaleX(0);
+                transform-origin: center;
+                width: 100%;
+                height: 2px;
+                background-color: $main;
+                transition: transform 0.3s ease;
+              }
+              &:hover::after {
+                transform: translateX(-50%) scaleX(1);
+              }
+            }
+          }
+        }
+      }
+    }
+    /* Показ хедера, если чекбокс отмечен */
+    // .toggle-header-checkbox:checked ~ .header-container header {
+    //   transform: translateY(0);
+    //    visibility: visible;
+    //   }
+    //   .toggle-header-checkbox:checked ~ .toggle-header-btn{
+    //      transform: rotate(90deg);
+    //    }
+  }
+  .right-panel {
+    z-index: 1;
+    position: absolute;
+    right: 52px;
+    top: 50%;
+    transform: translateY(-50%);
+    .nav-main {
+      position: relative;
+      .nav-main-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+        a {
+          padding: 130% 60%;
+          cursor: pointer;
+          transition: 0.3s;
+          color: $context;
+          &:hover {
+            color: $main;
+          }
+        }
+        
+        .nav-item {
+          position: relative;
+          &.active{
+            a{
+              color: $main;
+            }
+            &::after{
+              transform: translateY(-50%) scaleY(1); 
+            }
+          }
+          &::after {
+            content: "";
+            border-radius: 1px;
+            position: absolute;
+            top: 50%; // Центрируем по вертикали
+            left: 190%; // Расстояние от текста
+            transform: translateY(-50%) scaleY(0); // Скрываем полоску
+            transform-origin: center; // Центр масштабирования
+            width: 3px; // Ширина полоски
+            height: 280%; // Высота в 2 раза больше текста
+            background-color: $main;
+            transition: transform 0.3s ease; // Плавное появление
+          }
+          // Эффект при наведении
+          &:hover::after {
+            transform: translateY(-50%) scaleY(1); // Показываем полоску
+          }
+        }
+        &::after {
+          content: "";
+          border-radius: 1px;
+          position: absolute;
+          top: 50%; // Центрируем по вертикали
+          left: 208%; // Расстояние от текста
+          transform: translateY(-50%); // Скрываем полоску
+          transform-origin: center; // Центр масштабирования
+          width: 1px; // Ширина полоски
+          height: 107%; // Высота в 2 раза больше текста
+          background-color: $context;
+          transition: transform 0.3s ease; // Плавное появление
+        }
+      }
+    }
+  }
+  #two {
+    width: 100%;
+    height: 870px;
+    box-sizing: border-box;
+    padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .top {
+      margin-bottom: 68px;
+    }
+    .midl {
+      display: flex;
+      justify-content: center;
+      padding: 0 80px;
+      gap: 30px;
+      .card {
+        max-width: 345px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        h3 {
+          transition: 0.3s;
+          text-align: center;
+        }
+        svg {
+          path {
+            transition: 0.3s;
+            fill: $context;
+          }
+        }
+        &:hover {
+          h3 {
+            color: $main;
+          }
+          svg {
+            path {
+              fill: $main;
+            }
+          }
+        }
+      }
+    }
+    .down{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 0 80px;
+      max-width: 1500px;
+      width: 100%;
+      margin-top: 15px;
+      svg{
+        transition: 0.3s;
+        
+        &:hover{
+          fill: $main;
+        }
+      }
+      .image-box{
+        width: 350px;
+        height: 370px;
+        background-image: url(../image/red.png);
+        @include bcimg();
+      }
+      .title-box{
+        max-width: 500px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  }
+  #free{
+    width: 100%;
+    height: 860px;
+    background-color:$dark;
+    position: relative;
+    display: flex;
+    align-items: center;
+    .title-box{
+      margin-left: 15%;
+      max-width: 450px;
+      width: 100%;
+      color: $light;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .midl{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .svg-box{
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          svg{
+            box-sizing: border-box;
+            width: 80px;
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
+}

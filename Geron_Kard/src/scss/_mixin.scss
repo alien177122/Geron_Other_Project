@@ -1,0 +1,33 @@
+@mixin btn($color, $bgColor){
+    @include text(14px,$bigtext,17.07px,$color);
+    border:1px solid $color;
+    background-color: $bgColor;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    transition: 300ms;
+    cursor: pointer;
+}
+@mixin text($fs,$we,$lh,$col){
+    font-family: "Mon", sans-serif;
+    font-size: $fs;
+    font-weight: $we;
+    line-height: $lh;
+    color: $col;
+}
+@mixin title($h1,$p){
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        h1::before{
+            content:$h1;
+            display: block;
+            @include text(16px,$bigtext,19.5px,$light);
+        }
+        p::before{
+            display: block;
+            content:$p;
+             @include text(12px,$smalltextp,14.63px,$light);
+        }
+    
+}

@@ -1,0 +1,821 @@
+@import url("./defout.css");
+@import url("./fonts.css");
+html {
+  scroll-behavior: smooth;
+}
+body a,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-family: "Mon", sans-serif;
+}
+.container {
+  width: 80%; /* Фиксированная ширина контейнера */
+  margin-left: 20%; /* Сдвигает контейнер вправо, оставляя автоматический отступ слева */
+}
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 42px;
+}
+h3 {
+  font-size: 26px;
+  font-weight: 500;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 16px;
+}
+
+body {
+  background-color: #000000;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  gap: 48px;
+  display: flex;
+}
+.sidebar .rokk {
+  margin: 0 auto 24px;
+}
+.sidebar a {
+  font-family: "Mon", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.sidebar a h5:hover {
+  color: whitesmoke;
+}
+.sidebar a h5 {
+  color: #808080;
+  transition: 0.3s;
+}
+.sidebar h5 {
+  color: #404040;
+  font-weight: 500;
+}
+.title-sid-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 36px;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.sidebar .orange {
+  color: #ff8202;
+}
+.title-sid-box:nth-child(1) {
+  height: 144px;
+}
+.svg-sid-box {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  margin-right: 8%;
+}
+.sidebar svg {
+  fill: white;
+  margin: 0 auto;
+}
+/*------------------------------------------------*/
+.svg-header-box {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+header svg {
+  margin: 0 auto;
+}
+header .search {
+  background-color: #1a1a1a;
+  box-sizing: border-box;
+  width: 50%;
+  border-radius: 8px;
+  height: 44px;
+  padding: 0 12px 0 19px;
+  min-width: 145px;
+}
+.search input {
+  padding: 8px 0;
+  width: 95%;
+  color: #ffffff; /* Цвет вводимого текста */
+  background-color: #1a1a1a;
+  font-family: "Mon", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+header h5 {
+  color: white;
+}
+header {
+  margin-left: 20%;
+  height: 109px;
+  box-sizing: border-box;
+  padding-left: 38px;
+  padding-right: 60px;
+  width: 80%;
+  background: linear-gradient(
+    90.46deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(26, 26, 26, 0.5) 100%
+  );
+}
+.user-box .svg-header-box {
+  width: 32px;
+  height: 32px;
+}
+.img-user {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden; /* Скрывает выступающие части фона, если это необходимо */
+  background-image: url("../image/man-logo.jpeg");
+  background-size: cover; /* Масштабирует изображение, чтобы оно полностью заполнило контейнер */
+  background-position: center; /* Центрирует изображение в контейнере */
+  background-repeat: no-repeat; /* Предотвращает повторение изображения */
+  margin-right: 12px;
+}
+.user-box {
+  width: 23%;
+  height: 52px;
+  min-width: 190px;
+}
+.user {
+  display: flex;
+  align-items: center;
+  background-color: #262626;
+  padding: 0 12px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  width: 80%;
+  height: 100%;
+  min-width: 150px;
+}
+.user h5 {
+  font-family: "Mon", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+.user .small {
+  font-weight: 300;
+  font-size: 12px;
+}
+/*------------------------------------------------*/
+main {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Разрешаем перенос блоков на новую строку */
+  gap: 40px;
+}
+#kamelot {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+
+  border-radius: 15px;
+}
+.gradient {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
+    /* затемнение снизу вверх */
+      linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  border-radius: 10px; /* Повторяет закругление углов */
+  pointer-events: none;
+}
+#kamelot .img-kamelot {
+  z-index: 1;
+  width: 80%; /* Ширина контейнера */
+  max-width: 880px; /* Максимальная ширина */
+  padding-top: 500px;
+  background-image: url("../image/kamelot.png"); /* URL изображения */
+  background-size: cover; /* Подгоняет изображение под контейнер */
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -8%;
+}
+#kamelot .overplay-box {
+  z-index: 3;
+  position: absolute;
+  top: -38%;
+  left: 114%;
+  width: 600px;
+  aspect-ratio: 1/1;
+  transform: translate(-100%, 0);
+}
+#kamelot .overplay-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%; /* Ширина внутреннего контейнера */
+  height: 75%; /* Высота внутреннего контейнера */
+  background: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+  border-radius: 20px; /* Закруглённые углы */
+  transform: translate(-50%, -50%) rotate(-40deg); /* Центрирует и поворачивает контейнер */
+  clip-path: inset(
+    0% round 15%
+  ); /* Ограничивает область с закруглёнными углами */
+}
+#kamelot h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  font-family: "Mon", sans-serif;
+  color: white;
+}
+.over-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 4;
+  height: 65%;
+  font-size: 14px;
+  position: absolute;
+  top: 18%;
+  left: 97%;
+  width: 230px;
+  transform: translate(-100%, 0);
+}
+.over-title p {
+  font-weight: 500;
+  line-height: 22.4px;
+  display: -webkit-box; /* Для использования line-clamp */
+  -webkit-box-orient: vertical; /* Устанавливает вертикальную ориентацию коробки */
+  -webkit-line-clamp: 7; /* Указывает максимальное количество строк, например, 3 */
+  overflow: hidden; /* Скрывает текст, выходящий за пределы */
+}
+#kamelot .about {
+  display: flex;
+  align-items: center;
+}
+#kamelot .about h4 {
+  margin-left: 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.svg-ove-box {
+  width: 24px;
+  height: 24px;
+}
+.over-title a {
+  cursor: pointer;
+}
+/*------------------------------------------------*/
+.title-kam-box h1 {
+  font-size: 60px;
+  font-weight: 700;
+  font-family: "Ubun", sans-serif;
+}
+.title-kam-box h3 {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Mon", sans-serif;
+}
+.title-kam-box svg {
+  margin-right: 6px;
+}
+.title-kam-box .title-up {
+  display: flex;
+  align-items: center;
+}
+.title-kam-box {
+  z-index: 3;
+  height: 134px;
+  width: 243px;
+  position: absolute;
+  top: 146px;
+  left: 3.6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/*------------------------------------------------*/
+.play-all-btn {
+  background-color: #ff8202; /* Оранжевый цвет */
+  color: #000000; /* Чёрный цвет текста */
+  font-size: 12px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 8px; /* Закругленные углы */
+  cursor: pointer;
+  font-weight: 500;
+  font-family: "Mon", sans-serif; /* Замените на нужный шрифт, если требуется */
+  transition: 0.3s;
+}
+.popular h4 {
+  font-weight: 700;
+  font-family: "Mon", sans-serif;
+}
+#player {
+  max-width: 720px;
+  width: 100%;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.popular {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.play-all-btn:hover {
+  background-color: #ba5700; /* Изменение цвета при наведении */
+}
+/*------------------------------------------------*/
+.list-music .title {
+  width: 100%;
+  height: 17px;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding-left: 27px;
+  padding-right: 125px;
+  font-family: "Mon", sans-serif;
+  margin-bottom: 40px;
+}
+.list-music .title .left-box {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.list-music .title .left-box h5 {
+  font-weight: 500;
+}
+.list-music .title h5 {
+  font-size: 14px;
+  font-weight: 600;
+}
+/*------------------------------------------------*/
+.list-music-box {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+.list-music-box .left-box {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+}
+.list-music-item {
+  cursor: pointer;
+  width: 100%;
+  padding-left: 29px;
+  padding-right: 14px;
+  box-sizing: border-box;
+}
+.list-music-active {
+  border-radius: 10px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  background-color: #1a1a1a;
+  box-shadow: 0 10px 0 rgba(26, 26, 26, 1), 0 -10px 0 rgba(26, 26, 26, 1);
+}
+/*
+.list-music-active:hover{
+  box-shadow: 10px 10px 0 rgb(186, 87, 0);
+}
+*/
+.list-music-active h5 {
+  color: #ffffff;
+}
+.list-music-box h5,
+svg {
+  color: #808080;
+  font-family: "Mon", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+.list-music-box .right-box {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.list-music-box .right-box svg {
+  transition: 0.3s;
+}
+.list-music-box .right-box svg:hover {
+  filter: drop-shadow(5px 5px 0px #ba5700);
+}
+.list-music-box .right-box h5 {
+  font-weight: 500;
+}
+.img-player {
+  width: 32px;
+  height: 32px;
+  overflow: hidden; /* Скрывает выступающие части фона, если это необходимо */
+  background-image: url("../image/eternety.png");
+  background-size: cover; /* Масштабирует изображение, чтобы оно полностью заполнило контейнер */
+  background-position: center; /* Центрирует изображение в контейнере */
+  background-repeat: no-repeat; /* Предотвращает повторение изображения */
+}
+.list-music-box .list-music-item:first-of-type .img-player {
+  background-image: url("../image/ascension.png");
+}
+/*------------------------------------------------*/
+
+.player-panel {
+  width: 100%;
+  height: 132px;
+  box-sizing: border-box;
+  padding: 24px 32px;
+  background: linear-gradient(
+    91.99deg,
+    rgba(26, 26, 26, 0.75) 0%,
+    rgba(38, 38, 38, 0.75) 100%
+  );
+  border-radius: 10px;
+}
+.player-panel .img-player {
+  width: 40px;
+  height: 40px;
+}
+.top .left-box {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.player-panel {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.player-panel svg {
+  cursor: pointer;
+}
+
+.player-panel .top svg {
+  transition: 0.3s;
+}
+.player-panel .center-box svg {
+  fill: white;
+  transition: 0.3s;
+}
+.player-panel .top svg:hover {
+  filter: drop-shadow(5px 5px 0px #ba5700);
+}
+.player-panel .center-box svg:hover {
+  filter: drop-shadow(5px 5px 0px #ba5700);
+}
+.title-left {
+  height: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.title-left h5 {
+  font-family: "Ubun", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+.title-left h5:first-of-type {
+  font-size: 14px;
+  font-weight: 700;
+}
+.player-panel .center-box {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  top: 21px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+}
+.top .right-box {
+  max-width: 138px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 12px;
+}
+/*------------------------------------------------*/
+.player-panel .down h5 {
+  font-family: "Mon", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.player-panel .down {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.down-center-box {
+  max-width: 555px;
+  width: 100%;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.line-gray {
+  width: 100%;
+  height: 0;
+  border: 3px solid #404040;
+  border-radius: 3px;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.line-orange {
+  width: 61%;
+  height: 0;
+  border: 3px solid #ff8202;
+  border-radius: 3px;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.sircle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 8px;
+  left: 62%;
+  transform: translate(-50%, -50%);
+}
+/*------------------------------------------------*/
+.show-more .bton {
+  background-color: #262626; /* Цвет фона кнопки */
+  color: white; /* Цвет текста */
+  padding: 10px 24px; /* Внутренние отступы */
+  font-family: "Mon", sans-serif;
+  font-size: 12px;
+  font-weight: 500; /* Шрифт */
+  border-radius: 8px; /* Закругленные углы */
+  cursor: pointer; /* Указатель мыши */
+  text-align: center; /* Выравнивание текста по центру */
+  transition: 0.3s;
+  width: 117px;
+}
+.show-more .bton:hover {
+  background-color: #ba5700;
+}
+.show-more {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*------------------------------------------------*/
+#albums {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+.albums-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.albums-title h5 {
+  font-family: "Mon", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+#albums .img-player {
+  width: 140px;
+  height: 140px;
+}
+.albums-box {
+  background-color: #1a1a1a;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 160px;
+  height: 208px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+.albums-box:hover {
+  background-color: #713601;
+}
+.title-al h5:first-of-type {
+  font-weight: 700;
+}
+.title-al h5 {
+  font-family: "Mon", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+.title-al {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.list-albums {
+  display: flex;
+  width: 340px;
+  flex-wrap: wrap; /* Разрешаем перенос блоков на новую строку */
+  gap: 20px;
+}
+.list-albums .albums-box:nth-child(2) .img-player {
+  background-image: url("../image/two.png");
+}
+.list-albums .albums-box:nth-child(3) .img-player {
+  background-image: url("../image/free.png");
+}
+.list-albums .albums-box:nth-child(4) .img-player {
+  background-image: url("../image/for.png");
+}
+/*------------------------------------------------*/
+.up-next {
+  position: absolute;
+  width: 100%;
+  height: 132px;
+  top: 340px;
+  left: 0;
+  background-color: #262626bf;
+  border-radius: 10px;
+  box-shadow: 16px 16px 40px 0px #00000040;
+  backdrop-filter: blur(100px);
+  box-sizing: border-box;
+  padding: 24px 24px 30px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+.up-next:hover {
+  background-color: #545454bf;
+}
+.up {
+  cursor: pointer;
+}
+.up h5 {
+  font-family: "Ubun", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+#albums .lef .img-player {
+  width: 32px;
+  height: 32px;
+  background-image: url("../image/ascension.png");
+}
+.lef {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.lef h5 {
+  font-family: "Ubun", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+.rig {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.rig h5 {
+  font-family: "Mon", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+.antidown h5 {
+  color: #bfbfbf;
+}
+.rig svg:hover {
+  filter: drop-shadow(5px 5px 0px #ba5700);
+}
+.rig svg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+/*------------------------------------------------*/
+#inf {
+  width: 895px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  padding-right: 5%;
+  box-sizing: border-box;
+}
+.first-word {
+  color: blue;
+}
+.down-to {
+  width: 100%;
+}
+.down-to p {
+  font-family: "Mon", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #bfbfbf;
+  line-height: 28.8px;
+}
+.midl h3 {
+  font-family: "Mon", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.26px;
+  color: white;
+}
+.midl {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+.midl .left {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.midl h4 {
+  font-family: "Mon", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.5px;
+  color: white;
+}
+.midl .left .title-down {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.midl .left .title-top {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.midl .center {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.first-word {
+  color: #bfbfbf;
+  font-family: "Mon", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25.6px;
+}
+.midl .center h4 {
+  line-height: 25.6px;
+}
+.midl .right {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.midl .right a {
+  transition: 0.3s;
+}
+
+.midl .right a:hover {
+  background-color: #ba5700;
+}

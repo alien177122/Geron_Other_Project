@@ -1,0 +1,43 @@
+@media screen and (max-width: 1140px) {
+   body{
+    .conteiner{
+     #inf{
+        justify-content: none;
+        flex-direction: column;
+        align-items: center;
+        .right{
+            text-align: center;
+            gap:20px;
+        }
+    }
+    #child{
+        gap:30px;
+        justify-content: center;
+        align-items: center;
+        .left-midl-box{  
+            gap:30px;
+        }
+        .right{
+            width: 100%;
+            gap:30px;
+            .btn{
+                &.reverse{
+                    margin: 0 auto;
+                    min-width: 250px;
+                width: 50%;
+                }
+            }
+        }
+    }
+}
+}
+}
+@media screen and (max-width: 500px){
+    .conteiner{
+        #child{
+            .left-box{
+                display: none;
+            }
+        }
+    }
+}

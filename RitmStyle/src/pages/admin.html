@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body class="container">
+    <h1 class="text-center my-4">Административная панель</h1>
+    <div class="d-flex gap-5 border border-info p-3 rounded-2 ">
+        <div class="col-5">
+            <h3>Введите новый заголовок</h3>
+            <input type="text" id="title-field" class="form-control mt-2 mb-4" onblur="setTitle()">
+            <input type="button" value="сохранить" class="btn btn-primary" onclick="saveTitle()">
+        </div>
+        <div class="col-5">
+            <h5>Текущий текст баннера</h5>
+            <h2 class="text-info mt-2" id="title">некий заголовок баннера</h2>
+        </div>
+    </div>
+
+    <div class="d-flex gap-5 border border-info p-3 rounded-2 mt-4">
+        <div class="col-5">
+            <h3>загрузите картинку баннера-живо!</h3>
+            <input type="file" accept="image/*" id="image-field" class="form-control mt-2 mb-4" onchange="previewImage()">
+            <input type="button" value="сохранить" class="btn btn-primary" onclick="saveImage()">
+        </div>
+        <div class="col-5">
+            <h5>чертова подпись баннера</h5>
+            <img src="../img/dicsover.png" class="col-5 ratio-1x1 cover" id="image">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

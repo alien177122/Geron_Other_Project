@@ -1,0 +1,102 @@
+@import url(style6.css);
+
+@media screen and (max-width: 950px) {
+  .list-music {
+    box-sizing: border-box;
+    padding-right: 5%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .sidebar h5 {
+    display: none;
+  }
+  .title-sid-box {
+    margin: 0;
+  }
+  .rokk {
+    display: none;
+  }
+  .sidebar {
+    top: 109px;
+    width: 5%;
+    padding-left: 3%;
+    background-color: none;
+  }
+  .container {
+    margin-left: 10%;
+    width: 90%;
+  }
+  .list-music {
+    box-sizing: border-box;
+    padding-right: 2%;
+  }
+  .player-panel .center-box {
+    gap: 14px;
+  }
+  header {
+    margin-left: 0;
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .over-title {
+    display: none;
+  }
+  .overplay-box {
+    display: none;
+  }
+  #kamelot .img-kamelot {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 620px) {
+  .down-to p {
+    font-size: 12px;
+  }
+  .left-box .title-left {
+    display: none;
+  }
+}
+@media screen and (max-width: 530px) {
+  .list-music-box .img-player {
+    display: none;
+  }
+  .center-box {
+    width: 160px;
+  }
+  .list-music .title .left-box {
+    gap: 32px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .player-panel .center-box svg:first-of-type {
+    display: none;
+  }
+  .player-panel .center-box svg:last-of-type {
+    display: none;
+  }
+  .center-box {
+    width: 110px;
+  }
+  .list-music-box .right-box {
+    gap: 16px;
+  }
+  .list-music-box .left-box {
+    gap: 16px;
+  }
+  .list-music .title {
+    padding-right: 92px;
+  }
+  .svg-header-box {
+    display: none;
+  }
+  body .container {
+    margin-left: 45px;
+  }
+  .user-box {
+    min-width: 150px;
+  }
+  .sidebar {
+    padding-left: 3%;
+  }
+}

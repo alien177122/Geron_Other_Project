@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+    <div class="form-container">
+        <form onsubmit="login(this); return false;">
+            <h2>Авторизация</h2>
+            <input type="text" name="email" placeholder="Введите E-mail" onblur="checkEmail(this)" class="textfield">
+            <input type="password" name="password" placeholder="Введите пароль" class="textfield">
+            <label for="show-pass">
+                <input type="checkbox" name="show" id="show-pass" onchange="showPass(this)">
+                <span>Показать пароль</span>
+            </label>
+            <input type="text" name="phone" placeholder="+7 7__ ___ __-__" onkeypress="checkPhone(this)" onkeyup="checkPhone(this)" class="textfield">
+            <input type="submit" value="Войти" class="btn">
+            <a href="./reg.html">Нет аккаунта?</a>            
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.6.1/imask.min.js" integrity="sha512-+3RJc0aLDkj0plGNnrqlTwCCyMmDCV1fSYqXw4m+OczX09Pas5A/U+V3pFwrSyoC1svzDy40Q9RU/85yb/7D2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../js/auth.js"></script>
+</body>
+</html>

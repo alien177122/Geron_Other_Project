@@ -1,0 +1,53 @@
+@media screen and (max-width: 1225px) {
+   html{
+    body{
+    
+    .conteiner{
+    #one{
+     /* Показ хедера, если чекбокс отмечен */
+     .toggle-header-checkbox:checked ~ .header-container{
+      right: 0;
+    }
+    .toggle-header-checkbox:checked ~ .toggle-body-btn {
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .toggle-header-btn {
+        right: 25px;
+    }
+    
+    .header-container{
+       top: 20px;
+       right: -260px;
+       z-index: 11;
+    header{
+        z-index: 11;
+        height: auto;
+        backdrop-filter: blur(20px); 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        padding: 25px 35px;
+       border-radius: 10px;
+       overflow: hidden;
+     .nav{
+        .nav-list{
+            gap: 30px;
+            flex-direction: column;
+            .nav-item{
+                transition: 0.3s;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+            .btn{
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+     }
+    }
+   }}
+}}}}
+@media screen and (max-width: 500px){
+   
+}

@@ -1,0 +1,438 @@
+@import "defoult";
+@import "mixin";
+@import "adaptive";
+/*
+.btn{
+    @include btn($main,$light);
+    &:hover{
+        @include btn($light,$main);
+    }
+    &-second{
+        @include btn($second,$light);
+        &:hover{
+            @include btn($light,$second);
+        }
+    }
+    &-reverse{
+        @include btn($light,transparent);
+        &:hover{
+            background-color: $light;
+            color: $second;
+    }
+}
+}
+*/
+body {
+    min-height: 100vh;
+  background-color: #f6f6f6;
+  .img-box {
+    overflow: hidden;
+    background-size: cover; /* Увеличивает изображение до полного заполнения контейнера */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Убирает повторение изображения */
+    border-radius: 10px;
+  }
+}
+.conteiner {
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    .right {
+      width: 60px;
+    }
+    h1 {
+      font-size: 24px;
+      font-family: "Mon", sans-serif;
+      font-weight: 900;
+      color: $active;
+    }
+  }
+  .flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #inf {
+    margin-top: 10px;
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .right {
+        max-width: 540px;
+        width: 100%;
+      box-sizing: border-box;
+      padding: 36px 55px;
+      border-radius: 10px;
+      background-color: $second;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      p {
+        @include text(20px, $bigtext, $fwbig, $light);
+      }
+    }
+    .left {
+        max-width: 540px;
+        width: 100%;
+      height: 350px;
+      background-image: url(../image/kids.jpeg);
+    }
+  }
+  #card {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    .card {
+      box-shadow: 0px 2px 8px 0px #0000000d;
+      background-color: $light;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 200px;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      .img-box {
+        width: 100%;
+        height: 175px;
+        background-image: url(../image/pc.png);
+        background-size: cover; /* Увеличивает изображение до полного заполнения контейнера */
+        background-position: center; /* Центрирует изображение */
+        background-repeat: no-repeat;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 10px 10.5px;
+        width: 100%;
+        height: 175px;
+        display: flex;
+        flex-direction: column;
+        h3 {
+          @include text(16px, $bigtext, 16.5px, $dark);
+        }
+        p {
+          @include text(12px, $smalltextp, $linehsmall, $pdark);
+          display: -webkit-box; /* Устанавливает контейнер в режим flex для многоколоночного текста */
+          -webkit-line-clamp: 3; /* Ограничивает текст тремя строками */
+          -webkit-box-orient: vertical; /* Задаёт вертикальную ориентацию для текста */
+          overflow: hidden; /* Скрывает текст, выходящий за пределы блока */
+          text-overflow: ellipsis; /* Добавляет троеточие */
+        }
+        .second {
+          @include btn($second, $light);
+          &:hover {
+            @include btn($light, $second);
+          }
+        }
+        .contex {
+          @include text(10px, $smalltextp, 12.19px, $psilver);
+        }
+      }
+    }
+  }
+  #bid {
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 170px;
+    .box {
+        
+        max-width: 312px;
+        width: 100%;
+      height: 266px;
+      margin-bottom: 56px;
+      h1 {
+        @include text(20px, $bigtext, $fwbig, $pdark);
+      }
+      input,
+      #special {
+        @include text(10px, $smalltextp, 12.19px, $placeholder);
+        width: 91%;
+        border: 1px solid $stroke;
+        border-radius: 7px;
+        padding: 7px 10px;
+      }
+      #special {
+        border-radius: 7px;
+        padding: 7px 10px;
+        width: 99%;
+      }
+      .btn {
+        @include btn($main, $light);
+        &:hover {
+          @include btn($light, $main);
+        }
+      }
+    }
+  }
+  #child {
+    margin-bottom: 80px;
+    width: 100%;
+    
+    box-sizing: border-box;
+    padding: 34px;
+    border-radius: 10px;
+    background-color: $second;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .left-midl-box{
+        display: flex;
+        gap: 39px;
+    .left-box {
+      position: relative;
+      width: 240px;
+      height: 240px;
+      overflow: hidden;
+      border-radius: 10px;
+      .left {
+        position: absolute;
+        width: 398px;
+        height: 245px;
+        left: -124.5px;
+        background-image: url(../image/child.jpeg);
+      }
+    }
+    .midl {
+        width: 210px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .title{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &.one{
+            @include title("ФИО","Меньшиков Илья Владимирович")
+        }
+        &.two{
+            @include title("E-mail","nikita@mail.com")
+        }
+        &.three{
+            @include title("Дата рождения","12.07.2008")
+        }
+    }
+    .btn {
+        width: 100%;
+      &.reverse {
+        @include btn($light, transparent);
+        &:hover {
+          background-color: $light;
+          color: $second;
+        }
+      }
+    }
+    }
+  
+    }
+    .right{
+        width: 472px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .title{
+        @include title("О себе","Таким образом постоянный количественный рост и сфера нашей активности способствует подготовки и реализации новых предложений. Повседневная практика показывает, что рамки и место обучения кадров играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! рамки и место обучения кадров способствует подготовки и реализации существенных финансовых и административных условий. Идейные соображения высшего порядка");
+        h1::before{
+            @include text(20px,$bigtext,$fwbig,$light);
+        }
+        gap:4px;
+        }
+        .btn {
+            width: 100%;
+          &.reverse {
+            @include btn($light, transparent);
+            &:hover {
+              background-color: $light;
+              color: $second;
+            }
+          }
+        }
+    }
+}
+  #achiev{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 95px;
+    h1{
+        @include text(20px,$bigtext,$fwbig,$pdark)
+    }
+    .card-box{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8%;
+        margin-bottom: 80px;
+        .card{
+            margin-top: 25px;
+            width: 110px;
+            height: 145px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            h4, p{
+                text-align: center;
+            }
+            h4{
+                @include text(12px,700,$linehsmall,$pdark);
+            }
+            p{
+                @include text(10px,$smalltextp,12.19px,$pdark);
+            }
+        }
+    }
+  }
+  .box{
+    box-sizing: border-box;
+    padding: 25px 20px 34px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: $light;
+    border: 1px solid $stroke;
+    input {
+        @include text(10px, $smalltextp, 12.19px, $placeholder);
+        width: 91%;
+        border: 1px solid $stroke;
+        border-radius: 7px;
+        padding: 7px 10px;
+      }
+      h1 {
+        @include text(20px, $bigtext, $fwbig, $pdark);
+      }
+  }
+  #mainhtml{
+    width: 100%;
+    input {
+        width: 100%
+    }
+  }
+  .input-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:13px;
+  }
+  #avtoriz{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .box {
+        max-width: 450px;
+        width: 100%;
+      height: 300px;
+      margin-bottom: 56px;
+      h1 {
+        @include text(20px, $bigtext, $fwbig, $pdark);
+      }
+      input {
+        @include text(12px, $smalltextp, 12.19px, $placeholder);
+        width: 91%;
+        border: 1px solid $stroke;
+        border-radius: 7px;
+        padding: 7px 10px;
+      }
+      .problem{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 13px;
+        a{
+            @include text(12px,$smalltextp,$linehsmall,$pdark);
+            cursor: pointer;
+            transition: 300ms;
+            &:hover{
+              color:$main;
+            }
+        }
+      }
+      .btn {
+        @include btn($light, $second);
+        &:hover {
+          @include btn($second, $light);
+        }
+      }
+    }
+  }
+  #reg{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    .box {
+        max-width: 450px;
+        width: 100%;
+      height: 384px;
+      .problem{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 13px;
+        a{
+            @include text(12px,$smalltextp,$linehsmall,$pdark);
+            cursor: pointer;
+            transition: 300ms;
+            &:hover{
+              color:$main;
+            }
+        }
+      }
+      .btn {
+        @include btn($light, $second);
+        &:hover {
+          @include btn($second, $light);
+        }
+      }
+    }
+  }
+}
+footer {
+  width: 100%;
+  height: 115px;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  background-color: $dark;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    @include text(20px, $bigtext, $fwbig, $light);
+  }
+  p {
+    @include text(12px, $smalltextp, $linehsmall, $light);
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+}

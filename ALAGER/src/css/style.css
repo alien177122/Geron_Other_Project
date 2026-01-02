@@ -1,0 +1,566 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background-color: transparent;
+  list-style: none;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 1225px) {
+  html body .conteiner #one {
+    /* Показ хедера, если чекбокс отмечен */
+  }
+  html body .conteiner #one .toggle-header-checkbox:checked ~ .header-container {
+    right: 0;
+  }
+  html body .conteiner #one .toggle-header-checkbox:checked ~ .toggle-body-btn {
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  html body .conteiner #one .toggle-header-btn {
+    right: 25px;
+  }
+  html body .conteiner #one .header-container {
+    top: 20px;
+    right: -260px;
+    z-index: 11;
+  }
+  html body .conteiner #one .header-container header {
+    z-index: 11;
+    height: auto;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 25px 35px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  html body .conteiner #one .header-container header .nav .nav-list {
+    gap: 30px;
+    flex-direction: column;
+  }
+  html body .conteiner #one .header-container header .nav .nav-list .nav-item {
+    transition: 0.3s;
+  }
+  html body .conteiner #one .header-container header .nav .nav-list .nav-item:hover {
+    transform: scale(1.2);
+  }
+  html body .conteiner #one .header-container header .nav .nav-list .btn:hover {
+    transform: scale(1.2);
+  }
+}
+.btn {
+  font-family: "Mus", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 12px 23px;
+  border-radius: 5px;
+  transition: 300ms;
+  cursor: pointer;
+}
+.btn:hover {
+  font-family: "Mus", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #ff0000;
+  padding: 12px 23px;
+  border-radius: 5px;
+  transition: 300ms;
+  cursor: pointer;
+}
+.btn-second {
+  font-family: "Mus", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 12px 23px;
+  border-radius: 5px;
+  transition: 300ms;
+  cursor: pointer;
+}
+.btn-second:hover {
+  font-family: "Mus", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #0085FF;
+  padding: 12px 23px;
+  border-radius: 5px;
+  transition: 300ms;
+  cursor: pointer;
+}
+.btn-reverse {
+  font-family: "Mus", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: transparent;
+  padding: 12px 23px;
+  border-radius: 5px;
+  transition: 300ms;
+  cursor: pointer;
+}
+.btn-reverse:hover {
+  background-color: #fff;
+  color: #0085FF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+}
+body section {
+  scroll-margin-top: 50px;
+}
+body .context {
+  color: #939393;
+}
+body .btn {
+  font-family: "Mus", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 12px 23px;
+  border-radius: 5px;
+  transition: 300ms;
+  cursor: pointer;
+}
+body .btn:hover {
+  font-family: "Mus", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #ff0000;
+  padding: 12px 23px;
+  border-radius: 5px;
+  transition: 300ms;
+  cursor: pointer;
+}
+body .btn-second {
+  font-family: "Mus", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 12px 23px;
+  border-radius: 5px;
+  transition: 300ms;
+  cursor: pointer;
+}
+body .btn-second:hover {
+  font-family: "Mus", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #0085FF;
+  padding: 12px 23px;
+  border-radius: 5px;
+  transition: 300ms;
+  cursor: pointer;
+}
+body .btn-reverse {
+  font-family: "Mus", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: transparent;
+  padding: 12px 23px;
+  border-radius: 5px;
+  transition: 300ms;
+  cursor: pointer;
+}
+body .btn-reverse:hover {
+  background-color: #fff;
+  color: #0085FF;
+}
+body h1 {
+  font-family: "Mus", sans-serif;
+  font-size: 46px;
+  font-weight: 900;
+}
+body h2 {
+  font-family: "Mus", sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+}
+body h3 {
+  font-family: "Mus", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+body h4 {
+  font-family: "Mus", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+body h5 {
+  font-family: "Mus", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+body p,
+body a,
+body input {
+  font-family: "Mus", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+body p.context,
+body a.context,
+body input.context {
+  color: #939393;
+}
+
+.conteiner {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+}
+.conteiner .img-box {
+  overflow: hidden;
+  background-size: cover; /* Увеличивает изображение до полного заполнения контейнера */
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Убирает повторение изображения */
+}
+.conteiner .flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.conteiner #one {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 850px;
+  /* Показ хедера, если чекбокс отмечен */
+}
+.conteiner #one a,
+.conteiner #one h1,
+.conteiner #one h2,
+.conteiner #one h3,
+.conteiner #one h4,
+.conteiner #one h5,
+.conteiner #one p {
+  color: #fff;
+}
+.conteiner #one .toggle-body-btn {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100vw;
+  height: 850px;
+  transition: background-color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0);
+}
+.conteiner #one .toggle-header-btn {
+  position: absolute;
+  top: 42px;
+  right: -25px;
+  z-index: 9;
+}
+.conteiner #one .toggle-header-checkbox {
+  display: none; /* Скрываем сам чекбокс */
+}
+.conteiner #one .header-svg {
+  margin-top: 43px;
+  margin-left: 25px;
+}
+.conteiner #one .img-box {
+  height: 863px;
+  z-index: -1;
+  width: 100%;
+  background-image: url(../image/one2.png);
+  position: absolute;
+  top: -13px;
+}
+.conteiner #one .title-box {
+  box-sizing: border-box;
+  position: relative;
+  height: 776px;
+  width: 100%;
+}
+.conteiner #one .title-box .left {
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.conteiner #one .title-box .left h5 {
+  color: #939393;
+  transform: rotate(-90deg);
+  letter-spacing: 0.5em;
+}
+.conteiner #one .title-box .midl {
+  position: absolute;
+  left: 10%;
+  margin-right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+.conteiner #one .title-box .midl .button-link {
+  width: 380px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: "Mus", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px 40px;
+  background-color: #ff0000;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.conteiner #one .title-box .midl .button-link #im {
+  transition: 0.3s;
+  fill: #fff;
+}
+.conteiner #one .title-box .midl .button-link:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+  color: #ff0000;
+}
+.conteiner #one .title-box .midl .button-link:hover #im {
+  fill: #ff0000;
+}
+.conteiner #one .title-box .right-panel .nav-main .nav-main-list .nav-item.active a {
+  color: #fff;
+}
+.conteiner #one .title-box .right-panel .nav-main .nav-main-list .nav-item.active::after {
+  transform: translateY(-50%) scaleY(1);
+}
+.conteiner #one .title-box .right-panel .nav-main .nav-main-list .nav-item a {
+  color: #939393;
+}
+.conteiner #one .title-box .right-panel .nav-main .nav-main-list .nav-item a:hover {
+  color: #fff;
+}
+.conteiner #one .title-box .right-panel .nav-main .nav-main-list .nav-item::after {
+  background-color: #fff;
+}
+.conteiner #one .header-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  transition: 0.3s;
+}
+.conteiner #one .header-container header {
+  /* Скрытие хедера по умолчанию */
+  border-radius: 10px;
+  transition: 0.3s;
+  height: 74px;
+  box-sizing: border-box;
+  padding: 18px 31px;
+  /* Анимация для плавного появления/скрытия */
+}
+.conteiner #one .header-container header .nav .nav-list {
+  display: flex;
+  align-items: center;
+  gap: 59px;
+}
+.conteiner #one .header-container header .nav .nav-list .btn {
+  color: #ff0000;
+}
+.conteiner #one .header-container header .nav .nav-list .btn:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+.conteiner #one .header-container header .nav .nav-list .nav-item {
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.conteiner #one .header-container header .nav .nav-list .nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 2px;
+  background-color: #ff0000;
+  transition: transform 0.3s ease;
+}
+.conteiner #one .header-container header .nav .nav-list .nav-item:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+.conteiner .right-panel {
+  z-index: 1;
+  position: absolute;
+  right: 52px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.conteiner .right-panel .nav-main {
+  position: relative;
+}
+.conteiner .right-panel .nav-main .nav-main-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+.conteiner .right-panel .nav-main .nav-main-list a {
+  padding: 130% 60%;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #939393;
+}
+.conteiner .right-panel .nav-main .nav-main-list a:hover {
+  color: #ff0000;
+}
+.conteiner .right-panel .nav-main .nav-main-list .nav-item {
+  position: relative;
+}
+.conteiner .right-panel .nav-main .nav-main-list .nav-item.active a {
+  color: #ff0000;
+}
+.conteiner .right-panel .nav-main .nav-main-list .nav-item.active::after {
+  transform: translateY(-50%) scaleY(1);
+}
+.conteiner .right-panel .nav-main .nav-main-list .nav-item::after {
+  content: "";
+  border-radius: 1px;
+  position: absolute;
+  top: 50%;
+  left: 190%;
+  transform: translateY(-50%) scaleY(0);
+  transform-origin: center;
+  width: 3px;
+  height: 280%;
+  background-color: #ff0000;
+  transition: transform 0.3s ease;
+}
+.conteiner .right-panel .nav-main .nav-main-list .nav-item:hover::after {
+  transform: translateY(-50%) scaleY(1);
+}
+.conteiner .right-panel .nav-main .nav-main-list::after {
+  content: "";
+  border-radius: 1px;
+  position: absolute;
+  top: 50%;
+  left: 208%;
+  transform: translateY(-50%);
+  transform-origin: center;
+  width: 1px;
+  height: 107%;
+  background-color: #939393;
+  transition: transform 0.3s ease;
+}
+.conteiner #two {
+  width: 100%;
+  height: 870px;
+  box-sizing: border-box;
+  padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.conteiner #two .top {
+  margin-bottom: 68px;
+}
+.conteiner #two .midl {
+  display: flex;
+  justify-content: center;
+  padding: 0 80px;
+  gap: 30px;
+}
+.conteiner #two .midl .card {
+  max-width: 345px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.conteiner #two .midl .card h3 {
+  transition: 0.3s;
+  text-align: center;
+}
+.conteiner #two .midl .card svg path {
+  transition: 0.3s;
+  fill: #939393;
+}
+.conteiner #two .midl .card:hover h3 {
+  color: #ff0000;
+}
+.conteiner #two .midl .card:hover svg path {
+  fill: #ff0000;
+}
+.conteiner #two .down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 80px;
+  max-width: 1500px;
+  width: 100%;
+  margin-top: 15px;
+}
+.conteiner #two .down svg {
+  transition: 0.3s;
+}
+.conteiner #two .down svg:hover {
+  fill: #ff0000;
+}
+.conteiner #two .down .image-box {
+  width: 350px;
+  height: 370px;
+  background-image: url(../image/red.png);
+  overflow: hidden;
+  background-repeat: no-repeat; /* не повторяем изображение */
+  background-position: center; /* центрируем изображение по горизонтали и вертикали */
+  background-size: cover;
+  position: relative;
+}
+.conteiner #two .down .title-box {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.conteiner #free {
+  width: 100%;
+  height: 860px;
+  background-color: #202020;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.conteiner #free .title-box {
+  margin-left: 15%;
+  max-width: 450px;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.conteiner #free .title-box .midl {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.conteiner #free .title-box .midl .svg-box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.conteiner #free .title-box .midl .svg-box svg {
+  box-sizing: border-box;
+  width: 80px;
+  height: 60px;
+}
+
+/*# sourceMappingURL=style.css.map */
